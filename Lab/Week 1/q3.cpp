@@ -1,28 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
+    int exponent;
+    float base, result = 1;
 
-    int a, b, c;
+    cout << "Enter base and exponent respectively:  ";
+    cin >> base >> exponent;
 
-    cout << "Enter three numbers \n";
+    cout << base << "^" << exponent << " = ";
 
-    /* Taking input */
-    cin >> a >> b >> c;
+    while (exponent != 0) {
+        result *= base;
+        --exponent;
+    }
 
-    /* If a is smaller than b and c. */
+    cout << result;
 
-    if (a < b && a < c) {
-        cout << "Smallest number is " << a;
-
-      /* If b is smaller than a and c */
-    } else if (b < a && b < c)  {
-       cout << "Smallest number is " << b;
-
-    } else {
-      cout << "Smallest number is "<< c;
-
-     }
-
-      return 0;
+    return 0;
 }
